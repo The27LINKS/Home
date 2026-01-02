@@ -81,9 +81,22 @@
     <div id="footer-placeholder"></div>
 
     <script src="js/main.js"></script>
+    <script>
+document.addEventListener("copy", function(e) {
+  e.preventDefault();
+
+  const message =
+    "⚠️ Copying is disabled!\n" +
+    "Visit our website ( https://the27links.github.io/Home/index.html ) for original content.\n" +
+    "© 2026 The 27LINKS Official. All rights reserved.";
+
+  e.clipboardData.setData("text/plain", message);
+});
+</script>
 </body>
 
 </html>
+
 
 
 
