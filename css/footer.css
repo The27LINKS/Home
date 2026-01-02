@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     gap: 25px; /* Fixed pixel gap is more stable than vw */
-    margin-bottom: 30px;
+    margin-top: 50px;
 }
 
 /* 2. The Icon Circle */
