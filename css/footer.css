@@ -1,1 +1,44 @@
+/* ---------------------------------------------------------------- FOOTER STYLES ------------------------------------------------------------------------- */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin: 30px 0;
+}
 
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Specific Brand Colors */
+.github { background: hsl(59, 92%, 72%); }
+.youtube { background: hsl(59, 92%, 72%); }
+.twitter { background: hsl(59, 92%, 72%); }
+
+.main-footer-text {
+    text-align: center;
+    font-family: 'Caveat', cursive; /* Using the handwriting font */
+    margin: 50px auto 20px auto;
+    font-size: 1.2rem;
+}
