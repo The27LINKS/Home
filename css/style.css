@@ -4,3 +4,20 @@ nav ul { list-style: none; display: flex; gap: 20px; }
 nav a { color: white; text-decoration: none; }
 main { padding: 2rem; min-height: 60vh; }
 footer { background: #222; color: #fff; text-align: center; padding: 1rem; margin-top: auto; }
+/* --- Brand Images Style --- */
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;        /* Adds space between logo and the blue tick */
+    cursor: pointer;
+}
+
+.brand-logo {
+    height: 40px;     /* IMPORTANT: Limits logo height so it doesn't break the navbar */
+    width: auto;      /* Keeps the aspect ratio (doesn't stretch the image) */
+    display: block;   /* Removes extra spacing below images */
+}
+
+/* Optional: If your logo is black and the navbar is black, invert the color */
+/* .brand-logo { filter: invert(1); } */
