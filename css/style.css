@@ -42,12 +42,6 @@ body {
     width: auto;
 }
 
-.verified-badge {
-    width: 20px;
-    height: 20px;
-    fill: #1DA1F2;
-}
-
 /* --- CENTER: SEARCH BAR --- */
 .header-center {
     flex: 2; /* Gives search bar more room than logo/links */
