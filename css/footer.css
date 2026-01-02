@@ -1,44 +1,63 @@
-/* ---------------------------------------------------------------- FOOTER STYLES ------------------------------------------------------------------------- */
+/* ================= FOOTER STYLES ================= */
+
+/* 1. Social Icons Container */
 .social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2vw;
-    margin: 30px 0;
+    gap: 25px; /* Fixed pixel gap is more stable than vw */
+    margin-bottom: 30px;
 }
 
+/* 2. The Icon Circle */
 .icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;  /* Slightly smaller looks more elegant */
+    height: 50px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #1a1a1a; /* Dark circle background */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid #333; /* Thin border */
 }
 
+/* 3. The Icon Image */
 .icon img {
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
     object-fit: contain;
+    /* This makes black icons (like GitHub) white so they show on dark bg */
+    filter: invert(1) brightness(2); 
 }
 
+/* 4. Hover Effects: Use Official Colors or the Hacker Green */
 .icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px); /* Moves up slightly */
+    border-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 255, 65, 0.2); /* Green glow */
 }
 
-/* Specific Brand Colors */
-.github { background: hsl(59, 92%, 72%); }
-.youtube { background: hsl(59, 92%, 72%); }
-.twitter { background: hsl(59, 92%, 72%); }
+/* Specific Official Colors on Hover (Recommended) */
+.github:hover { background-color: #333; }       /* Dark Grey */
+.youtube:hover { background-color: #ff0000; }   /* YouTube Red */
+.twitter:hover { background-color: #1DA1F2; }   /* Twitter Blue */
 
+
+/* 5. Footer Text */
 .main-footer-text {
     text-align: center;
+    /* Use a clean font instead of handwriting for the copyright */
     font-family: 'Caveat', cursive; /* Using the handwriting font */
-    margin: 50px auto 20px auto;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* If you want to keep the signature font for "Robert Storm" specifically */
+.signature {
+    font-family: 'Caveat', cursive;
+    color: #00ff41; /* Green signature */
     font-size: 1.2rem;
+    margin-left: 5px;
 }
