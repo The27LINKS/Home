@@ -104,51 +104,11 @@ document.addEventListener("copy", function(e) {
   e.clipboardData.setData("text/plain", message);
 });
 </script>
-<script>
 
-document.addEventListener("DOMContentLoaded", function() {
-    
-    // Function to show the modal
-    function showSecurityAlert() {
-        const modal = document.getElementById('security-modal');
-        // Console log to help debug if it fails again
-        console.log("Attempting to show modal...", modal); 
-        
-        if (modal) {
-            modal.style.display = 'flex';
-        } else {
-            alert("Security Alert! (Popup missing)");
-        }
-    }
-
-    // Function to close the modal
-    window.closeModal = function() {
-        const modal = document.getElementById('security-modal');
-        if (modal) modal.style.display = 'none';
-    };
-
-    // 1. Disable Right-Click
-    document.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
-        showSecurityAlert();
-    });
-
-    // 2. Disable Keyboard Shortcuts
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'F12' || 
-            (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-            (e.ctrlKey && e.shiftKey && e.key === 'J') || 
-            (e.ctrlKey && e.key === 'u')) {
-            
-            e.preventDefault();
-            showSecurityAlert();
-        }
-    });
-});
-</script>
 </body>
 
 </html>
+
 
 
 
