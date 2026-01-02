@@ -1,8 +1,10 @@
 .header-thumbnail{
-           position: relative;
-            height: 45vw;
+            position: relative;
+            height: 40vw;
             max-width: auto;
             background-image: url("../assets/images/thumbnail.jpg");
+            background-size: cover; 
+            background-position: center;
             margin: auto;
             overflow: hidden;
 }
