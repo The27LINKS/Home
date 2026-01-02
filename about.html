@@ -22,7 +22,15 @@
         <h1>About Us</h1>
         <p>This page automatically inherits the header and footer from the components folder.</p>
     </main>
-
+     <div id="security-modal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-icon">⚠️</div>
+    <h2>Restricted Access</h2>
+    <p>Developer tools and context menus are disabled on this interface.</p>
+    <p class="sub-text">Protected by The 27LINKS Security</p>
+    <button onclick="closeModal()">Acknowledge</button>
+  </div>
+</div>
     <div id="footer-placeholder"></div>
 
     <script src="js/main.js"></script>
@@ -41,6 +49,7 @@ document.addEventListener("copy", function(e) {
 </body>
 
 </html>
+
 
 
 
