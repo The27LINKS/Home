@@ -1,10 +1,18 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-nav { background: #333; color: white; padding: 1rem; display: flex; justify-content: space-between; }
-nav ul { list-style: none; display: flex; gap: 20px; }
-nav a { color: white; text-decoration: none; }
-main { padding: 2rem; min-height: 60vh; }
-footer { background: #222; color: #fff; text-align: center; padding: 1rem; margin-top: auto; }
-/* --- Brand Images Style --- */
+/* Optional: If your logo is black and the navbar is black, invert the color */
+/* .brand-logo { filter: invert(1); } */
+/* --- GOOGLE FONTS IMPORTS --- */
+/* (We will link these in HTML, but setting up fonts here) */
+:root {
+    --banner-width-vw: 80vw;
+    --shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: #f4f6f8;
+}
 
 .brand-wrapper {
     display: flex;
@@ -18,6 +26,96 @@ footer { background: #222; color: #fff; text-align: center; padding: 1rem; margi
     width: auto;      /* Keeps the aspect ratio (doesn't stretch the image) */
     display: block;   /* Removes extra spacing below images */
 }
+/* --- HEADER (Search Bar) STYLES --- */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    padding: 8px 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 20px auto; /* Centers it with space on top */
+}
 
-/* Optional: If your logo is black and the navbar is black, invert the color */
-/* .brand-logo { filter: invert(1); } */
+.search-icon {
+    color: #888;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-button {
+    background: green;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.search-button:hover {
+    background: #005ec4;
+}
+
+/* --- FOOTER STYLES --- */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin: 30px 0;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Specific Brand Colors */
+.github { background: hsl(59, 92%, 72%); }
+.youtube { background: hsl(59, 92%, 72%); }
+.twitter { background: hsl(59, 92%, 72%); }
+
+.main-footer-text {
+    text-align: center;
+    font-family: 'Caveat', cursive; /* Using the handwriting font */
+    margin: 50px auto 20px auto;
+    font-size: 1.2rem;
+}
