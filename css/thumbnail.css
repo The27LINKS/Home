@@ -1,4 +1,12 @@
-     .carousel-container {
+.header-thumbnail{
+           position: relative;
+            height: 40vw;
+            max-width: 90%;
+            background-image: url("../assets/images/thumbnail.jpg");
+            margin: auto;
+            overflow: hidden;
+}
+.carousel-container {
             position: relative;
             height: 40vw;
             max-width: 90%;
