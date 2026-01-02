@@ -105,59 +105,51 @@ document.addEventListener("copy", function(e) {
 });
 </script>
 <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    
     // Function to show the modal
-function showSecurityAlert() {
-    const modal = document.getElementById('security-modal');
-    if (modal) {
-        modal.style.display = 'flex'; // Shows the modal
+    function showSecurityAlert() {
+        const modal = document.getElementById('security-modal');
+        // Console log to help debug if it fails again
+        console.log("Attempting to show modal...", modal); 
+        
+        if (modal) {
+            modal.style.display = 'flex';
+        } else {
+            alert("Security Alert! (Popup missing)");
+        }
     }
-}
 
-// Function to close the modal (attached to the button)
-function closeModal() {
-    document.getElementById('security-modal').style.display = 'none';
-}
+    // Function to close the modal
+    window.closeModal = function() {
+        const modal = document.getElementById('security-modal');
+        if (modal) modal.style.display = 'none';
+    };
 
-// 1. Disable Right-Click and trigger alert
-document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-    showSecurityAlert();
-});
-
-// 2. Disable Keyboard Shortcuts and trigger alert
-document.addEventListener('keydown', function (e) {
-    // F12 (DevTools)
-    if (e.key === 'F12') {
+    // 1. Disable Right-Click
+    document.addEventListener('contextmenu', function (e) {
         e.preventDefault();
         showSecurityAlert();
-        return false;
-    }
+    });
 
-    // Ctrl + Shift + I (Inspect)
-    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-        e.preventDefault();
-        showSecurityAlert();
-        return false;
-    }
-
-    // Ctrl + Shift + J (Console)
-    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-        e.preventDefault();
-        showSecurityAlert();
-        return false;
-    }
-
-    // Ctrl + U (View Source)
-    if (e.ctrlKey && e.key === 'u') {
-        e.preventDefault();
-        showSecurityAlert();
-        return false;
-    }
+    // 2. Disable Keyboard Shortcuts
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'F12' || 
+            (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+            (e.ctrlKey && e.shiftKey && e.key === 'J') || 
+            (e.ctrlKey && e.key === 'u')) {
+            
+            e.preventDefault();
+            showSecurityAlert();
+        }
+    });
 });
 </script>
 </body>
 
 </html>
+
 
 
 
