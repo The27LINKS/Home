@@ -49,8 +49,8 @@
     text-align: center;
     /* Use a clean font instead of handwriting for the copyright */
     font-family: 'Caveat', cursive; /* Using the handwriting font */
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 1.5rem;
+    color: #220202;
     margin-top: 20px;
 }
 
