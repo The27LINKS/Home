@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/thumbnail.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" herf="css/rightclick.css">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -78,6 +79,16 @@
 
     </main>
 
+    <div id="security-modal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-icon">⚠️</div>
+    <h2>Restricted Access</h2>
+    <p>Developer tools and context menus are disabled on this interface.</p>
+    <p class="sub-text">Protected by The 27LINKS Security</p>
+    <button onclick="closeModal()">Acknowledge</button>
+  </div>
+</div>
+    
     <div id="footer-placeholder"></div>
 
     <script src="js/main.js"></script>
@@ -93,9 +104,61 @@ document.addEventListener("copy", function(e) {
   e.clipboardData.setData("text/plain", message);
 });
 </script>
+<script>
+    // Function to show the modal
+function showSecurityAlert() {
+    const modal = document.getElementById('security-modal');
+    if (modal) {
+        modal.style.display = 'flex'; // Shows the modal
+    }
+}
+
+// Function to close the modal (attached to the button)
+function closeModal() {
+    document.getElementById('security-modal').style.display = 'none';
+}
+
+// 1. Disable Right-Click and trigger alert
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    showSecurityAlert();
+});
+
+// 2. Disable Keyboard Shortcuts and trigger alert
+document.addEventListener('keydown', function (e) {
+    // F12 (DevTools)
+    if (e.key === 'F12') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+
+    // Ctrl + Shift + I (Inspect)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+
+    // Ctrl + Shift + J (Console)
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+
+    // Ctrl + U (View Source)
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+});
+</script>
 </body>
 
 </html>
+
 
 
 
