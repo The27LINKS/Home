@@ -6,7 +6,6 @@
     justify-content: space-between; /* Spreads them out (Left, Center, Right) */
     align-items: center;       /* Vertically centers them */
     padding: 10px 30px;        /* Adds breathing room */
-    background: #ffffff;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     position: sticky;          /* OPTIONAL: Keeps header at top when scrolling */
     top: 0;
