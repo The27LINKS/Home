@@ -21,7 +21,11 @@
     transition: all 0.3s ease;
     border: 1px solid #333; /* Thin border */
 }
-
+#footer-placeholder{
+    margin-top: 10px;
+    padding-top: 1px;
+    border: 1px solid white;
+}
 /* 3. The Icon Image */
 .icon img {
     width: 50%;
