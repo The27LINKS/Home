@@ -1,34 +1,60 @@
-/* 1. Style the Protection Overlay (Hidden by default) */
+/* 1. The Blackout Overlay (Used for PrtScn) */
 #protection-overlay {
-    display: none; /* Hidden normally */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: #000;
-    color: #ff3333;
-    z-index: 2147483647; /* Maximum allowed Z-Index */
+    z-index: 2147483647; /* Max Z-Index */
     align-items: center;
     justify-content: center;
-    text-align: center;
-    font-family: 'Courier New', monospace;
+    flex-direction: column;
 }
 
-/* 2. THE PRINT HACK: This runs automatically when Ctrl+P is pressed */
+/* 2. The Content inside the blackout */
+.lock-content {
+    color: #ff3333;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    background: #111;
+    padding: 30px;
+    border: 2px solid #ff3333;
+    border-radius: 10px;
+}
+
+.lock-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff3333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 3. PRINT PREVIEW FIX (The "Ctrl+P" Hack) */
 @media print {
-    body * {
-        visibility: hidden; /* Hide everything */
+    body > * {
+        display: none !important; /* Hide EVERYTHING in the body */
     }
-    #protection-overlay, #protection-overlay * {
-        visibility: visible; /* Show only the overlay */
-        display: flex !important;
-    }
+    
+    /* Reveal ONLY the protection overlay */
     #protection-overlay {
-        position: absolute;
+        display: flex !important;
+        position: fixed !important;
         top: 0;
         left: 0;
-        background: white; /* Save printer ink, or keep black for style */
+        width: 100vw;
+        height: 100vh;
+        background: white; /* Save ink */
         color: black;
+        z-index: 9999999;
+    }
+    
+    /* Hide the button when printing */
+    .lock-content button {
+        display: none;
     }
 }
