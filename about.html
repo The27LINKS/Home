@@ -44,8 +44,7 @@
 </div>
     <div id="footer-placeholder"></div>
     </header>
-    <script src="js/main.js"></script>
-        
+       <script src="js/main.js"></script>
     <script>
 document.addEventListener("copy", function(e) {
   e.preventDefault();
@@ -110,66 +109,47 @@ document.addEventListener('keydown', function (e) {
 });
 </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    
-    // Select the special overlay
+    document.addEventListener("DOMContentLoaded", function() {
     const overlay = document.getElementById('protection-overlay');
-    const mainContent = document.body; // Or select your specific wrapper like #app
 
-    // FUNCTION: Trigger the "Blackout"
-    function enableProtection() {
-        if(overlay) {
+    // Function to turn ON the blackout
+    function triggerBlackout() {
+        if (overlay) {
             overlay.style.display = "flex";
-            // Optional: Hide scrollbars
-            document.body.style.overflow = "hidden"; 
+            document.body.style.overflow = "hidden"; // Stop scrolling
         }
     }
 
-    // FUNCTION: Restore the site
-    function disableProtection() {
-        if(overlay) {
+    // Function to turn OFF the blackout (Attached to the button)
+    window.dismissOverlay = function() {
+        if (overlay) {
             overlay.style.display = "none";
-            document.body.style.overflow = "auto";
+            document.body.style.overflow = "auto"; // Enable scrolling
         }
-    }
+    };
 
-    // 1. Detect PrintScreen Key (PrtScn)
+    // 1. Detect PrintScreen Key (keyup is safer for PrtScn)
     document.addEventListener('keyup', function (e) {
         if (e.key === 'PrintScreen') {
-            // Immediately show overlay
-            enableProtection();
+            // INSTANTLY cover the screen
+            triggerBlackout();
             
-            // Alert user
-            alert("Screenshots are disabled on this page.");
-
-            // Hide overlay after a delay (so they can continue reading)
-            setTimeout(disableProtection, 1000); // 1 second blackout
+            // Clear the clipboard (Only works in some browsers, but worth adding)
+            navigator.clipboard.writeText('Screenshots disabled by The 27LINKS');
         }
     });
 
-    // 2. Detect Ctrl + P (Print) - Fallback for JS
-    // (The CSS @media print handles the visual, this stops the action)
+    // 2. Detect Ctrl+P (Print)
     document.addEventListener('keydown', function (e) {
         if (e.ctrlKey && e.key === 'p') {
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            alert("Printing is disabled.");
+            // Trigger blackout visually just in case
+            triggerBlackout();
+            // (The @media print CSS handles the actual print preview data)
         }
     });
-
-    // 3. Snipping Tool Blocker (Window Blur)
-    // When user clicks "New" in Snipping Tool, the browser loses focus.
-    // We blur the page so they can't see anything to snip.
-    window.addEventListener('blur', function() {
-        document.body.style.filter = 'blur(20px)';
-    });
-
-    window.addEventListener('focus', function() {
-        document.body.style.filter = 'none';
-    });
-});
+});;
     </script>
-        <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
     const canvas = document.getElementById('matrix-bg');
     const ctx = canvas.getContext('2d');
@@ -231,6 +211,7 @@ document.addEventListener('keydown', function (e) {
 </body>
 
 </html>
+
 
 
 
