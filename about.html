@@ -31,15 +31,15 @@
     <h2>Restricted Access</h2>
     <p>Developer tools and context menus are disabled on this interface.</p>
     <p class="sub-text">Protected by The 27LINKS Security</p>
-    <button onclick="closeModal()">Acknowledge</button>
+    <button onclick="closeModal()">I Understand</button>
   </div>
 </div>
-    <div id="protection-overlay">
+  <div id="protection-overlay">
     <div class="lock-content">
-        <h1>⚠️ COPY PROTECTED</h1>
-        <p>Screenshots and Printing are disabled on The27LINKS.</p>
+        <h1>⚠️ SECURITY ALERT</h1>
+        <p>Screenshots and Printing are disabled.</p>
         <p class="sub-text">Protected by The 27LINKS Security</p>
-        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Security Lock" width="100">
+        <button onclick="dismissOverlay()">I Understand</button>
     </div>
 </div>
     <div id="footer-placeholder"></div>
@@ -211,6 +211,7 @@ document.addEventListener('keydown', function (e) {
 </body>
 
 </html>
+
 
 
 
