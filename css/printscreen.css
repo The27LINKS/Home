@@ -1,0 +1,34 @@
+/* 1. Style the Protection Overlay (Hidden by default) */
+#protection-overlay {
+    display: none; /* Hidden normally */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: #ff3333;
+    z-index: 2147483647; /* Maximum allowed Z-Index */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+/* 2. THE PRINT HACK: This runs automatically when Ctrl+P is pressed */
+@media print {
+    body * {
+        visibility: hidden; /* Hide everything */
+    }
+    #protection-overlay, #protection-overlay * {
+        visibility: visible; /* Show only the overlay */
+        display: flex !important;
+    }
+    #protection-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white; /* Save printer ink, or keep black for style */
+        color: black;
+    }
+}
