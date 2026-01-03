@@ -30,12 +30,22 @@
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background: #f4f6f8;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Courier New', 'Fira Code', monospace; /* The Hacker Font */
 }
 
+/* Custom Scrollbar (Chrome/Edge/Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent-green); /* Neon scrollbar handle */
+    border-radius: 4px;
+}
 /* --- Hero Section --- */
 .hero { 
     background-color: var(--primary-dark); 
