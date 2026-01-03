@@ -88,16 +88,6 @@
     50% { opacity: 0.5; }
 }
 
-.search-button {
-    background: transparent;
-    color: white;
-    border: 1px solid #e0e0e0;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 /* ================= RIGHT: NAVIGATION LINKS ================= */
 .header-right {
     flex: 1;
