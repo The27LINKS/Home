@@ -98,9 +98,70 @@ document.addEventListener('keydown', function (e) {
     }
 });
 </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    
+    // Select the special overlay
+    const overlay = document.getElementById('protection-overlay');
+    const mainContent = document.body; // Or select your specific wrapper like #app
+
+    // FUNCTION: Trigger the "Blackout"
+    function enableProtection() {
+        if(overlay) {
+            overlay.style.display = "flex";
+            // Optional: Hide scrollbars
+            document.body.style.overflow = "hidden"; 
+        }
+    }
+
+    // FUNCTION: Restore the site
+    function disableProtection() {
+        if(overlay) {
+            overlay.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }
+
+    // 1. Detect PrintScreen Key (PrtScn)
+    document.addEventListener('keyup', function (e) {
+        if (e.key === 'PrintScreen') {
+            // Immediately show overlay
+            enableProtection();
+            
+            // Alert user
+            alert("Screenshots are disabled on this page.");
+
+            // Hide overlay after a delay (so they can continue reading)
+            setTimeout(disableProtection, 1000); // 1 second blackout
+        }
+    });
+
+    // 2. Detect Ctrl + P (Print) - Fallback for JS
+    // (The CSS @media print handles the visual, this stops the action)
+    document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && e.key === 'p') {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            alert("Printing is disabled.");
+        }
+    });
+
+    // 3. Snipping Tool Blocker (Window Blur)
+    // When user clicks "New" in Snipping Tool, the browser loses focus.
+    // We blur the page so they can't see anything to snip.
+    window.addEventListener('blur', function() {
+        document.body.style.filter = 'blur(20px)';
+    });
+
+    window.addEventListener('focus', function() {
+        document.body.style.filter = 'none';
+    });
+});
+    </script>
 </body>
 
 </html>
+
 
 
 
