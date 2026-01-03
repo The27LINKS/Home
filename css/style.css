@@ -2,8 +2,31 @@
 /* (We will link these in HTML, but setting up fonts here) */
 
 :root {
-    --banner-width-vw: 80vw;
-    --shadow: 0 8px 20px rgba(0,0,0,0.18);
+    /* --- BACKGROUNDS (The Void) --- */
+    /* Deepest black for footer/modals - Absorbs light */
+    --bg-deep: #050505; 
+    /* Main body background - Very dark slate for less eye strain than pure black */
+    --bg-main: #0a0f14; 
+    /* Card/Header background - Slightly lighter to float above body */
+    --bg-card: #11161d; 
+
+    /* --- TEXT COLOURS --- */
+    /* Primary Text - Off-white (Pure white hurts eyes on dark mode) */
+    --text-main: #e6f1ff; 
+    /* Secondary Text - Cool grey for descriptions */
+    --text-muted: #8892b0; 
+    
+    /* --- THE DOPAMINE TRIGGERS (Accents) --- */
+    /* "Access Granted" Green - For success, primary buttons, active states */
+    --accent-green: #00ff41; 
+    /* "Cyber" Blue - For links, tech elements, borders */
+    --accent-blue: #00f3ff; 
+    /* "System Alert" Red - For your security warnings/blocks */
+    --accent-alert: #ff3333;
+
+    /* --- SPECIAL EFFECTS --- */
+    --neon-glow: 0 0 10px rgba(0, 255, 65, 0.5);
+    --glass-effect: rgba(17, 22, 29, 0.85); /* For see-through header */
 }
 
 body {
