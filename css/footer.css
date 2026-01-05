@@ -24,7 +24,7 @@
 #footer-placeholder{
     margin-top: 10px;
     padding-top: 1px;
-    border: 1px solid white;
+    border-top: 1px solid white;
 }
 /* 3. The Icon Image */
 .icon img {
