@@ -61,7 +61,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 .hero-logo {
-    font-size: 4.5em; /* Increased size */
+    font-size: 2.5em; /* Increased size */
     font-weight: 900;
     color: var(--text-white);
     letter-spacing: 5px;
