@@ -8,7 +8,8 @@
 
 .t27-legal-container {
     width: 96%; 
-    margin-right: 2%;
+    margin: 0 auto;
+    box-sizing: border-box; 
     background-color: var(--glass-bg); /* Semi-transparent black */
     padding: 50px;
     border-radius: 12px;
