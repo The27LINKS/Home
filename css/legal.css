@@ -14,7 +14,7 @@
     padding: 50px;
     border-radius: 12px;
     border: var(--card-border);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgb(167 158 158 / 50%);
 }
 
 .t27-legal-title {
