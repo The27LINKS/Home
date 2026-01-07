@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal | The27LINKS✔️</title> 
+    <meta property="og:image" content="https://the27links.github.io/Home/assets/images/thumbnail.jpg" />
+    <meta property="og:url" content="https://the27links.github.io/Home/" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/rightclick.css">
+    <link rel="stylesheet" href="css/printscreen.css">
+    <link rel="stylesheet" href="css/legal.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+    <header>
+    <div id="header-placeholder"></div>
+
+    <main class="t27-content">
+
+    <section class="t27-legal-section">
+        <div class="t27-legal-container">
+            
+            <h1 class="t27-legal-title">Terms of Service</h1>
+            <span class="t27-last-updated">Last Updated: January 2026</span>
+
+            <p class="t27-legal-text">
+                Welcome to The27LINKS. By accessing our website and using our software or electronic design services, you agree to the following terms. These terms are designed to ensure a safe and professional environment for both our clients and our team.
+            </p>
+
+            <h2 class="t27-legal-h2">1. Services</h2>
+            <p class="t27-legal-text">
+                The27LINKS provides software development services, educational resources, and electronic design prototypes. As a student-founded initiative, all services are provided on an "as-is" basis tailored to specific client agreements.
+            </p>
+
+            <h2 class="t27-legal-h2">2. Intellectual Property Rights</h2>
+            <p class="t27-legal-text">
+                Unless otherwise agreed upon in writing:
+            </p>
+            <ul class="t27-legal-list">
+                <li><strong>Our Work:</strong> The code, designs, and content on this website are the intellectual property of The27LINKS and Robert Storm.</li>
+                <li><strong>Client Projects:</strong> Upon proper paperwork and permission, rights to custom software built for clients are transferred to the client, while The27LINKS retains the right to showcase the work in our portfolio.</li>
+            </ul>
+
+            <h2 class="t27-legal-h2">3. Limitation of Liability</h2>
+            <p class="t27-legal-text">
+                To the fullest extent permitted by law, The27LINKS shall not be liable for any indirect, incidental, or consequential damages (including loss of data or profit) arising out of the use or inability to use our services.
+            </p>
+
+            <hr class="t27-divider">
+
+            <h1 class="t27-legal-title">Privacy Policy</h1>
+            
+            <h2 class="t27-legal-h2">1. Data Collection</h2>
+            <p class="t27-legal-text">
+                We respect your privacy. We only collect information that you voluntarily provide to us (such as Name and Email) via our contact forms for the purpose of project communication.
+            </p>
+
+            <h2 class="t27-legal-h2">2. Data Usage</h2>
+            <ul class="t27-legal-list">
+                <li>We use your data solely to respond to inquiries and deliver services.</li>
+                <li>We do <strong>not</strong> sell, trade, or rent your personal identification information to others.</li>
+                <li>We do not use cookies for ad tracking.</li>
+            </ul>
+
+            <h2 class="t27-legal-h2">3. Contact Us</h2>
+            <p class="t27-legal-text">
+                If you have questions regarding these terms, please reach out to us via the contact section on our homepage.
+            </p>
+
+        </div>
+    </section>
+</main>
+
+
+
+      
+     <div id="security-modal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-icon">⚠️</div>
+    <h2>Restricted Access</h2>
+    <p>Developer tools and context menus are disabled on this interface.</p>
+    <p class="sub-text">Protected by The 27LINKS Security</p>
+    <button onclick="closeModal()">I Understand</button>
+  </div>
+</div>
+  <div id="protection-overlay">
+    <div class="lock-content">
+        <h1>⚠️ SECURITY ALERT</h1>
+        <p>Screenshots and Printing are disabled.</p>
+        <p class="sub-text">Protected by The 27LINKS Security</p>
+        <button onclick="dismissOverlay()">I Understand</button>
+    </div>
+</div>
+    <div id="footer-placeholder"></div>
+    </header>
+       <script src="js/main.js"></script>
+    <script src="js/searching.js"></script>
+    
+    <script>
+document.addEventListener("copy", function(e) {
+  e.preventDefault();
+
+  const message =
+    "⚠️ Copying is disabled!\n" +
+    "Visit our website ( https://the27links.github.io/Home/index.html ) for original content.\n" +
+    "© 2026 The 27LINKS Official. All rights reserved.";
+
+  e.clipboardData.setData("text/plain", message);
+});
+</script>
+    <script>
+    // Function to show the modal
+function showSecurityAlert() {
+    const modal = document.getElementById('security-modal');
+    if (modal) {
+        modal.style.display = 'flex'; // Shows the modal
+    }
+}
+
+// Function to close the modal (attached to the button)
+function closeModal() {
+    document.getElementById('security-modal').style.display = 'none';
+}
+
+// 1. Disable Right-Click and trigger alert
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    showSecurityAlert();
+});
+
+// 2. Disable Keyboard Shortcuts and trigger alert
+document.addEventListener('keydown', function (e) {
+    // F12 (DevTools)
+    if (e.key === 'F12') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+
+    // Ctrl + Shift + I (Inspect)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+
+    // Ctrl + Shift + J (Console)
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+
+    // Ctrl + U (View Source)
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+});
+</script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const overlay = document.getElementById('protection-overlay');
+
+    // Function to turn ON the blackout
+    function triggerBlackout() {
+        if (overlay) {
+            overlay.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Stop scrolling
+        }
+    }
+
+    // Function to turn OFF the blackout (Attached to the button)
+    window.dismissOverlay = function() {
+        if (overlay) {
+            overlay.style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling
+        }
+    };
+
+    // 1. Detect PrintScreen Key (keyup is safer for PrtScn)
+    document.addEventListener('keyup', function (e) {
+        if (e.key === 'PrintScreen') {
+            // INSTANTLY cover the screen
+            triggerBlackout();
+            
+            // Clear the clipboard (Only works in some browsers, but worth adding)
+            navigator.clipboard.writeText('Screenshots disabled by The 27LINKS');
+        }
+    });
+
+    // 2. Detect Ctrl+P (Print)
+    document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && e.key === 'p') {
+            // Trigger blackout visually just in case
+            triggerBlackout();
+            // (The @media print CSS handles the actual print preview data)
+        }
+    });
+});;
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const canvas = document.getElementById('matrix-bg');
+    const ctx = canvas.getContext('2d');
+
+    // Set canvas to full screen
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Configuration
+    const fontSize = 14;
+    const columns = canvas.width / fontSize; // Number of columns for the rain
+    
+    // An array of drops - one per column
+    // 1 = y coordinate of the drop (initially at the top)
+    const drops = [];
+    for (let x = 0; x < columns; x++) {
+        drops[x] = 1; 
+    }
+
+    // Characters to display (Matrix uses Katakana + Latin, we'll use a mix)
+    const chars = "0123456789ABCDEF@#$%^&*THE27LINKS";
+    
+    function draw() {
+        // Black BG for the canvas
+        // translucent BG to show trail effect
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; 
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "#00ff41"; // The Hacker Green Text
+        ctx.font = fontSize + "px monospace";
+
+        // Loop over drops
+        for (let i = 0; i < drops.length; i++) {
+            // A random character to print
+            const text = chars.charAt(Math.floor(Math.random() * chars.length));
+            
+            // x = i * fontSize, y = value of drops[i] * fontSize
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+            // Sending the drop back to the top randomly after it has crossed the screen
+            // Adding a randomness to the reset to make the drops scattered on the Y axis
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+
+            // Increment Y coordinate
+            drops[i]++;
+        }
+    }
+
+    // Run the animation at 30 FPS (33ms)
+    setInterval(draw, 33);
+});
+    </script>
+</body>
+
+</html>
