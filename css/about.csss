@@ -1,0 +1,106 @@
+/* --- ABOUT PAGE STYLES (Dark Web/Animated Background Version) --- */
+
+/* The Roadmap / Timeline Style */
+.t27-timeline {
+    border-left: 3px solid var(--primary-neon); /* Made slightly thicker */
+    /* Added a subtle glow to the main timeline line so it stands out */
+    box-shadow: -2px 0 15px rgba(0, 243, 255, 0.3); 
+    margin-left: 20px;
+    padding-left: 30px;
+    margin-top: 40px;
+    position: relative;
+    /* Ensure it sits above the background animation */
+    z-index: 10; 
+}
+
+.t27-timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    /* Optional: Add a dark frosted background to each item for maximum readability */
+    /* background: rgba(0,0,0,0.6); */
+    /* backdrop-filter: blur(4px); */
+    /* padding: 20px; */
+    /* border-radius: 8px; */
+}
+
+/* The glowing dot on the timeline */
+.t27-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -40px; /* Adjusted for thicker line */
+    top: 5px;
+    width: 18px; /* Slightly larger */
+    height: 18px;
+    background-color: #000; /* Solid black center hides animation behind dot */
+    border: 2px solid var(--primary-neon);
+    border-radius: 50%;
+    /* Stronger double glow effect */
+    box-shadow: 0 0 15px var(--primary-neon), inset 0 0 8px var(--primary-neon);
+}
+
+.t27-year {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-neon);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    display: block;
+    /* Text shadow helps it pop off busy backgrounds */
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+}
+
+/* --- THE TECH ARSENAL GRID (Major Changes Here) --- */
+.t27-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Slightly wider boxes */
+    gap: 25px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.t27-tech-box {
+    /* CRITICAL CHANGE: "Dark Glass" Effect */
+    /* 1. Dark, semi-transparent background allows animation to be seen darkly */
+    background: rgba(10, 10, 10, 0.75); 
+    
+    /* 2. Blur filter makes falling text behind the box fuzzy so it doesn't distract */
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+
+    /* 3. Subtle neon border defines the edge against the dark background */
+    border: 1px solid rgba(0, 243, 255, 0.3); 
+    
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Adds depth */
+}
+
+/* Hover effect for interaction */
+.t27-tech-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.4); /* Strong neon glow on hover */
+    background: rgba(10, 10, 10, 0.9); /* Gets darker on hover for focus */
+}
+
+.t27-tech-box h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 15px 0 8px 0;
+    letter-spacing: 1px;
+}
+
+.t27-tech-box span {
+    color: #aaa; /* Slightly lighter grey for better contrast */
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+/* Optional: Style the emoji/icon if you are using one inside the box */
+.t27-tech-box div {
+    font-size: 2.5rem;
+    /* Adds a subtle neon glow to the icon itself */
+    filter: drop-shadow(0 0 8px var(--primary-neon));
+}
