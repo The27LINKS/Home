@@ -130,80 +130,73 @@
     .brand-logo { height: 40px; }
 }
 /* The Dropdown Container */
-.storm-search-results {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 100%; /* Sits directly below the input */
-    left: 0;
-    width: 100%;
-    background-color: #0a0f14; /* Deep Dark Background */
-    border: 1px solid #00ff41; /* Neon Green Border */
-    border-top: none;
-    z-index: 9999;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-    border-radius: 0 0 8px 8px;
-    font-family: 'Courier New', monospace;
-    max-height: 300px;
-    overflow-y: auto;
-}
+  /* --- 3. THE RESULTS DROPDOWN (This was missing before!) --- */
+        .storm-search-results {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 105%; /* Pushes it just below the input */
+            left: 0;
+            width: 100%; /* Matches input width */
+            
+            background-color: #161616;
+            border: 1px solid #333;
+            border-radius: 10px;
+            z-index: 1000; /* Floats on top */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            overflow: hidden;
+        }
 
-/* Individual Result Item */
-.storm-result-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 15px;
-    text-decoration: none;
-    border-bottom: 1px solid #1e2630;
-    transition: all 0.2s ease;
-}
+        /* Result Items */
+        .storm-result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 1px solid #222;
+            text-decoration: none;
+            color: #ccc;
+            transition: 0.2s;
+            cursor: pointer;
+        }
 
-.storm-result-item:last-child {
-    border-bottom: none;
-}
+        .storm-result-item:hover {
+            background-color: #00f3ff; /* Neon Hover Background */
+            color: #000; /* Text turns black for contrast */
+        }
 
-/* Hover Effect (Dopamine Trigger) */
-.storm-result-item:hover {
-    background-color: rgba(0, 255, 65, 0.1);
-    padding-left: 20px; /* Slide animation */
-    cursor: pointer;
-}
+        .storm-result-item:last-child {
+            border-bottom: none;
+        }
 
-/* Text Styles */
-.result-title {
-    color: #e6f1ff; /* White text */
-    font-weight: bold;
-    display: block;
-}
+        /* Text inside results */
+        .result-info {
+            display: flex;
+            flex-direction: column;
+        }
 
-.result-type {
-    font-size: 0.8em;
-    color: #8892b0; /* Muted grey */
-}
+        .result-title {
+            font-weight: bold;
+            font-size: 1rem;
+        }
 
-/* Status Indicators (Availability) */
-.result-status {
-    font-size: 0.75em;
-    padding: 2px 6px;
-    border-radius: 4px;
-    text-transform: uppercase;
-}
+        .result-type {
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
 
-.result-status.live, .result-status.available {
-    color: #00ff41; /* Green */
-    border: 1px solid #00ff41;
-}
+        /* Status Badge (Live, Coming Soon) */
+        .result-status {
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #333;
+            color: #fff;
+        }
 
-.result-status.restricted {
-    color: #ff3333; /* Red */
-    border: 1px solid #ff3333;
-}
-
-/* No Result Message */
-.no-result {
-    padding: 15px;
-    color: #ff3333;
-    font-style: italic;
-    text-align: center;
-    font-size: 0.9em;
-}
+        /* "No Result" Message */
+        .no-result {
+            padding: 15px;
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
