@@ -1,151 +1,91 @@
-/* --- THE27LINKS MIDDLE CONTENT STYLES --- */
+/* --- THE27LINKS LEGAL PAGE STYLES --- */
 
-:root {
-    --primary-neon: #00f3ff; /* Neon Cyan */
-    --glass-bg: rgba(20, 20, 20, 0.7); /* Semi-transparent dark for readability */
-    --card-border: 1px solid rgba(0, 243, 255, 0.2);
-}
-
-/* Typography for this section */
-.t27-content {
-    font-family: 'Roboto', sans-serif;
-    color: #e0e0e0;
-    width: 100%;
-    overflow-x: hidden; /* Prevents scrollbar issues on mobile */
-}
-
-.t27-title {
-    font-family: 'Orbitron', sans-serif;
-    color: var(--primary-neon);
-}
-
-/* HERO SECTION */
-.t27-hero {
-    min-height: 80vh; /* Takes up most of the screen but leaves room for footer */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: transparent; /* Transparent as requested */
-    padding: 20px;
-}
-
-.t27-hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
-}
-
-.t27-typing {
-    color: var(--primary-neon);
-    border-right: 3px solid var(--primary-neon);
-    padding-right: 5px;
-}
-
-.t27-btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 35px;
+.t27-legal-section {
+    padding: 120px 5% 60px; /* Top padding clears fixed headers */
     background: transparent;
-    color: var(--primary-neon);
-    border: 1px solid var(--primary-neon);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    transition: 0.3s;
-    box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+    min-height: 80vh;
 }
 
-.t27-btn:hover {
-    background-color: var(--primary-neon);
-    color: #000;
-    box-shadow: 0 0 25px rgba(0, 243, 255, 0.8);
-}
-
-/* SERVICES GRID SECTION */
-.t27-services {
-    padding: 60px 5%; /* 5% padding ensures it looks good on all screens */
-    background: transparent;
-}
-
-.t27-section-header {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.t27-grid {
-    display: grid;
-    /* Auto-fit magic: Creates as many columns as fit. 
-       - Mobile: 1 column
-       - Tablet: 2 columns
-       - Laptop: 3 columns */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px;
-}
-
-.t27-card {
-    background-color: var(--glass-bg); /* See-through dark tint */
-    backdrop-filter: blur(5px); /* Blurs the background behind the card */
-    padding: 40px 30px;
+.t27-legal-container {
+   width: 95%; 
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--glass-bg); /* Semi-transparent black */
+    padding: 50px;
     border-radius: 12px;
     border: var(--card-border);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.t27-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.15);
-    border-color: var(--primary-neon);
+.t27-legal-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-neon);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--primary-neon);
+    padding-bottom: 15px;
+    display: inline-block;
 }
 
-.t27-icon {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+.t27-last-updated {
     display: block;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
 }
 
-.t27-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+.t27-legal-h2 {
+    font-family: 'Orbitron', sans-serif;
     color: #fff;
+    font-size: 1.4rem;
+    margin-top: 35px;
+    margin-bottom: 15px;
 }
 
-.t27-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #ccc;
+.t27-legal-text {
+    font-family: 'Roboto', sans-serif;
+    color: #ddd;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1rem;
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
-
-/* Tablet (Portrait) and large phones */
-@media (max-width: 992px) {
-    .t27-hero h1 {
-        font-size: 2.8rem;
-    }
+.t27-legal-list {
+    list-style-type: none;
+    padding-left: 10px;
 }
 
-/* Mobile Phones */
-@media (max-width: 600px) {
-    .t27-hero h1 {
-        font-size: 2rem; /* Smaller font so it fits on screen */
-    }
-    
-    .t27-hero p {
-        font-size: 0.9rem;
-        padding: 0 10px;
-    }
+.t27-legal-list li {
+    margin-bottom: 10px;
+    color: #ddd;
+    padding-left: 20px;
+    position: relative;
+}
 
-    .t27-services {
-        padding: 40px 20px; /* Less padding on mobile */
-    }
+/* Custom bullet points */
+.t27-legal-list li::before {
+    content: "►";
+    color: var(--primary-neon);
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+    top: 4px;
+}
 
-    .t27-grid {
-        grid-template-columns: 1fr; /* Force single column on phones */
+.t27-divider {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 50px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .t27-legal-container {
+        padding: 30px 20px;
+    }
+    .t27-legal-title {
+        font-size: 1.8rem;
     }
 }
