@@ -33,19 +33,22 @@
 
 /* ================= CENTER: SEARCH BAR ================= */
 .header-center {
-    flex: 2; /* Gives search bar more room than logo/links */
+    flex: 2;
     display: flex;
     justify-content: center;
+    overflow: visible; 
 }
 
 .search-container {
+    position: relative;
     display: flex;
     align-items: center;
     border-radius: 50px;
     padding: 8px 15px;
     width: 100%;
-    max-width: 500px; /* Prevents it from getting too wide */
+    max-width: 500px;
     border: 1px solid #e0e0e0;
+    background-color: transparent; 
 }
 
 .search-input {
@@ -58,6 +61,7 @@
     color: white !important; /* Forces text to be white */
     caret-color: var(--accent-green); /* The blinking cursor stays green */
 }
+
 .processing-text {
     color: var(--accent-green);
     font-size: 24px;
