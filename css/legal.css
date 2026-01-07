@@ -7,8 +7,7 @@
 }
 
 .t27-legal-container {
-   width: 95%; 
-    max-width: 800px;
+    width: 96%; 
     margin: 0 auto;
     background-color: var(--glass-bg); /* Semi-transparent black */
     padding: 50px;
