@@ -1,5 +1,3 @@
-/* --- ABOUT PAGE STYLES (Dark Web/Animated Background Version) --- */
-
 /* The Roadmap / Timeline Style */
 .t27-timeline {
     border-left: 3px solid var(--primary-neon); /* Made slightly thicker */
