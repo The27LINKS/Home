@@ -1,0 +1,93 @@
+/* --- TOOLS PAGE STYLES --- */
+
+.t27-tools-grid {
+    display: grid;
+    /* Responsive: Fits as many 280px boxes as possible per row */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+/* The Tool Card (The Box itself) */
+.t27-tool-card {
+    display: block; /* Makes the anchor tag a box */
+    text-decoration: none; /* Removes underline */
+    
+    /* Dark Glass Effect */
+    background: rgba(10, 10, 10, 0.8); 
+    backdrop-filter: blur(10px); /* Blurs the falling text behind it */
+    -webkit-backdrop-filter: blur(10px);
+    
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effects */
+.t27-tool-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+    background: rgba(20, 20, 20, 0.9);
+}
+
+/* The Icon inside the box */
+.tool-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    filter: drop-shadow(0 0 5px var(--primary-neon));
+}
+
+/* Title & Description */
+.tool-title {
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.tool-desc {
+    color: #aaa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* The "Launch" Arrow */
+.tool-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: var(--primary-neon);
+    font-size: 1.2rem;
+    opacity: 0; /* Hidden by default */
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.t27-tool-card:hover .tool-arrow {
+    opacity: 1; /* Show on hover */
+    transform: translateX(0);
+}
+
+/* Status Badges (Top Right) */
+.tool-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-live { background: rgba(0, 255, 0, 0.2); color: #0f0; border: 1px solid #0f0; }
+.badge-beta { background: rgba(255, 165, 0, 0.2); color: orange; border: 1px solid orange; }
+.badge-soon { background: rgba(255, 255, 255, 0.1); color: #888; border: 1px solid #555; }
