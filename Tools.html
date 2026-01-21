@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools | The27LINKS✔️</title>
+    <meta property="og:image" content="https://the27links.github.io/Home/assets/images/thumbnail.jpg" />
+    <meta property="og:url" content="https://the27links.github.io/Home/" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/rightclick.css">
+    <link rel="stylesheet" href="css/printscreen.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+    <header>
+    <div id="header-placeholder"></div>
+<main class="t27-content">
+
+    <section class="t27-hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1 class="t27-title">Digital <span class="t27-highlight">Arsenal</span></h1>
+            <p style="color: #ccc;">Select a tool to initialize protocol.</p>
+        </div>
+    </section>
+
+    <section style="padding-bottom: 100px;">
+        <div class="t27-tools-grid">
+
+            <a href="termux.html" class="t27-tool-card">
+                <span class="tool-badge badge-live">Live</span>
+                <div class="tool-icon">📟</div>
+                <h3 class="tool-title">Termux Lab</h3>
+                <p class="tool-desc">
+                    Comprehensive command list and setup guides for Android terminal emulation and ethical hacking.
+                </p>
+                <span class="tool-arrow">➝</span>
+            </a>
+
+            <a href="python.html" class="t27-tool-card">
+                <span class="tool-badge badge-live">Live</span>
+                <div class="tool-icon">🐍</div>
+                <h3 class="tool-title">Python Hub</h3>
+                <p class="tool-desc">
+                    Access source codes for automation scripts, web scrapers, and AI-based logic tools.
+                </p>
+                <span class="tool-arrow">➝</span>
+            </a>
+
+            <a href="study.html" class="t27-tool-card">
+                <span class="tool-badge badge-beta">Updated</span>
+                <div class="tool-icon">📚</div>
+                <h3 class="tool-title">The Archive</h3>
+                <p class="tool-desc">
+                    Class 12th Board resources, PDF notes, and previous year question papers.
+                </p>
+                <span class="tool-arrow">➝</span>
+            </a>
+
+            <a href="#" class="t27-tool-card" style="opacity: 0.7;">
+                <span class="tool-badge badge-soon">Locked</span>
+                <div class="tool-icon">🤖</div>
+                <h3 class="tool-title">Robotics Bay</h3>
+                <p class="tool-desc">
+                    Arduino schematics and PCB designs for custom electronic gadgets.
+                </p>
+                <span class="tool-arrow">🔒</span>
+            </a>
+
+            <a href="#" class="t27-tool-card">
+                <span class="tool-badge badge-beta">Beta</span>
+                <div class="tool-icon">🌐</div>
+                <h3 class="tool-title">Net-Tools</h3>
+                <p class="tool-desc">
+                    Basic networking utilities. Check public IP, port status, and connection speed.
+                </p>
+                <span class="tool-arrow">➝</span>
+            </a>
+
+            <a href="contact.html" class="t27-tool-card">
+                <div class="tool-icon">📡</div>
+                <h3 class="tool-title">Support Line</h3>
+                <p class="tool-desc">
+                    Direct encrypted channel to contact the developer for custom requests.
+                </p>
+                <span class="tool-arrow">➝</span>
+            </a>
+
+        </div>
+    </section>
+
+</main>
+    <div id="footer-placeholder"></div>
+
+       <script src="js/main.js"></script>
+    <script src="js/searching.js"></script>
+    <script>
+document.addEventListener("copy", function(e) {
+  e.preventDefault();
+
+  const message =
+    "⚠️ Copying is disabled!\n" +
+    "Visit our website ( https://the27links.github.io/Home/index.html ) for original content.\n" +
+    "© 2026 The 27LINKS Official. All rights reserved.";
+
+  e.clipboardData.setData("text/plain", message);
+});
+</script>
+    <script>
+    // Function to show the modal
+function showSecurityAlert() {
+    const modal = document.getElementById('security-modal');
+    if (modal) {
+        modal.style.display = 'flex'; // Shows the modal
+    }
+}
+
+// Function to close the modal (attached to the button)
+function closeModal() {
+    document.getElementById('security-modal').style.display = 'none';
+}
+
+// 1. Disable Right-Click and trigger alert
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    showSecurityAlert();
+});
+
+// 2. Disable Keyboard Shortcuts and trigger alert
+document.addEventListener('keydown', function (e) {
+    // F12 (DevTools)
+    if (e.key === 'F12') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+
+    // Ctrl + Shift + I (Inspect)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+
+    // Ctrl + Shift + J (Console)
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+
+    // Ctrl + U (View Source)
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+    }
+});
+</script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const overlay = document.getElementById('protection-overlay');
+
+    // Function to turn ON the blackout
+    function triggerBlackout() {
+        if (overlay) {
+            overlay.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Stop scrolling
+        }
+    }
+
+    // Function to turn OFF the blackout (Attached to the button)
+    window.dismissOverlay = function() {
+        if (overlay) {
+            overlay.style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling
+        }
+    };
+
+    // 1. Detect PrintScreen Key (keyup is safer for PrtScn)
+    document.addEventListener('keyup', function (e) {
+        if (e.key === 'PrintScreen') {
+            // INSTANTLY cover the screen
+            triggerBlackout();
+            
+            // Clear the clipboard (Only works in some browsers, but worth adding)
+            navigator.clipboard.writeText('Screenshots disabled by The 27LINKS');
+        }
+    });
+
+    // 2. Detect Ctrl+P (Print)
+    document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && e.key === 'p') {
+            // Trigger blackout visually just in case
+            triggerBlackout();
+            // (The @media print CSS handles the actual print preview data)
+        }
+    });
+});;
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const canvas = document.getElementById('matrix-bg');
+    const ctx = canvas.getContext('2d');
+
+    // Set canvas to full screen
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Configuration
+    const fontSize = 14;
+    const columns = canvas.width / fontSize; // Number of columns for the rain
+    
+    // An array of drops - one per column
+    // 1 = y coordinate of the drop (initially at the top)
+    const drops = [];
+    for (let x = 0; x < columns; x++) {
+        drops[x] = 1; 
+    }
+
+    // Characters to display (Matrix uses Katakana + Latin, we'll use a mix)
+    const chars = "0123456789ABCDEF@#$%^&*THE27LINKS";
+    
+    function draw() {
+        // Black BG for the canvas
+        // translucent BG to show trail effect
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; 
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "#00ff41"; // The Hacker Green Text
+        ctx.font = fontSize + "px monospace";
+
+        // Loop over drops
+        for (let i = 0; i < drops.length; i++) {
+            // A random character to print
+            const text = chars.charAt(Math.floor(Math.random() * chars.length));
+            
+            // x = i * fontSize, y = value of drops[i] * fontSize
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+            // Sending the drop back to the top randomly after it has crossed the screen
+            // Adding a randomness to the reset to make the drops scattered on the Y axis
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+
+            // Increment Y coordinate
+            drops[i]++;
+        }
+    }
+
+    // Run the animation at 30 FPS (33ms)
+    setInterval(draw, 33);
+});
+    </script>
+</body>
+
+</html>
