@@ -91,21 +91,3 @@
 .badge-live { background: rgba(0, 255, 0, 0.2); color: #0f0; border: 1px solid #0f0; }
 .badge-beta { background: rgba(255, 165, 0, 0.2); color: orange; border: 1px solid orange; }
 .badge-soon { background: rgba(255, 255, 255, 0.1); color: #888; border: 1px solid #555; }
-
-
-/* CSS to make the globe responsive on Mobile and Windows/Desktop */
-    .user-globe-container {
-        width: 100%;
-        max-width: 600px; /* Prevents it from getting too massive on large monitors */
-        height: 400px;    /* Default height */
-        margin: 0 auto;   /* Centers the div */
-        position: relative;
-        background-color: transparent; /* Ensures the div itself is transparent */
-    }
-
-    /* Adjust height for smaller mobile screens */
-    @media (max-width: 768px) {
-        .user-globe-container {
-            height: 300px;
-        }
-    }
