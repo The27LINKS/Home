@@ -129,3 +129,24 @@ body {
     z-index: -1; /* Puts it BEHIND everything else */
     opacity: 0.25; /* Transparency: Lower this (e.g., 0.1) if it's too distracting */
 }
+
+
+
+
+/* CSS to make the globe responsive on Mobile and Windows/Desktop */
+    .user-globe-container {
+        width: 100%;
+        max-width: 600px; /* Prevents it from getting too massive on large monitors */
+        height: 400px;    /* Default height */
+        margin: 0 auto;   /* Centers the div */
+        position: relative;
+        background-color: transparent; /* Ensures the div itself is transparent */
+    }
+
+    /* Adjust height for smaller mobile screens */
+    @media (max-width: 768px) {
+        .user-globe-container {
+            height: 300px;
+        }
+    }
+
